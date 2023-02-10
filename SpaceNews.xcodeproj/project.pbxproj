@@ -14,6 +14,8 @@
 		7B448365299596DA00C4EF7C /* SpaceNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B448364299596DA00C4EF7C /* SpaceNewsTests.swift */; };
 		7B44836F299596DA00C4EF7C /* SpaceNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B44836E299596DA00C4EF7C /* SpaceNewsUITests.swift */; };
 		7B448371299596DA00C4EF7C /* SpaceNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B448370299596DA00C4EF7C /* SpaceNewsUITestsLaunchTests.swift */; };
+		7B44837F299597EF00C4EF7C /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7B44837E299597EF00C4EF7C /* CachedAsyncImage */; };
+		7B448383299598C700C4EF7C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B448382299598C700C4EF7C /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		7B44836A299596DA00C4EF7C /* SpaceNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B44836E299596DA00C4EF7C /* SpaceNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsUITests.swift; sourceTree = "<group>"; };
 		7B448370299596DA00C4EF7C /* SpaceNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B448382299598C700C4EF7C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B44837F299597EF00C4EF7C /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +98,9 @@
 		7B448352299596D700C4EF7C /* SpaceNews */ = {
 			isa = PBXGroup;
 			children = (
+				7B4483812995989100C4EF7C /* Views */,
+				7B4483802995988A00C4EF7C /* API */,
 				7B448353299596D700C4EF7C /* SpaceNewsApp.swift */,
-				7B448355299596D700C4EF7C /* ContentView.swift */,
 				7B448357299596D900C4EF7C /* Assets.xcassets */,
 				7B448359299596DA00C4EF7C /* Preview Content */,
 			);
@@ -127,6 +132,22 @@
 			path = SpaceNewsUITests;
 			sourceTree = "<group>";
 		};
+		7B4483802995988A00C4EF7C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7B448382299598C700C4EF7C /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7B4483812995989100C4EF7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B448355299596D700C4EF7C /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +164,9 @@
 			dependencies = (
 			);
 			name = SpaceNews;
+			packageProductDependencies = (
+				7B44837E299597EF00C4EF7C /* CachedAsyncImage */,
+			);
 			productName = SpaceNews;
 			productReference = 7B448350299596D700C4EF7C /* SpaceNews.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 7B448347299596D700C4EF7C;
+			packageReferences = (
+				7B44837D299597EF00C4EF7C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 7B448351299596D700C4EF7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +286,7 @@
 			files = (
 				7B448356299596D700C4EF7C /* ContentView.swift in Sources */,
 				7B448354299596D700C4EF7C /* SpaceNewsApp.swift in Sources */,
+				7B448383299598C700C4EF7C /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B44837D299597EF00C4EF7C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B44837E299597EF00C4EF7C /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B44837D299597EF00C4EF7C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B448348299596D700C4EF7C /* Project object */;
 }
